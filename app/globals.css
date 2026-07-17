@@ -23,4 +23,141 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", sans-serif;
+  background: #f4f5f7;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+}
+
+header {
+  background: #0b1d33;
+  color: white;
+  padding: 20px 40px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+article {
+  line-height: 1.8;
+}
+
+article h1 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+article h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+}
+
+article p {
+  margin: 1rem 0;
+}
+
+article ul {
+  margin-left: 2rem;
+}
+
+/* Two-column article layout with sticky TOC on desktop */
+.article-layout {
+  display: block;
+}
+
+.toc-column {
+  margin-bottom: 1rem;
+}
+
+.content-column {
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .article-layout {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .toc-column {
+    flex: 0 0 300px;
+    max-width: 300px;
+  }
+
+  .content-column {
+    flex: 1 1 0;
+  }
+
+  /* make the actual TOC sticky inside the column */
+  .toc {
+    position: sticky;
+    top: 100px;
+  }
+}
+
+/* Reading progress bar */
+.reading-progress {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 4px;
+  background: transparent;
+  z-index: 9999;
+}
+
+.reading-progress__bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0b66ff, #2aa7ff);
+  width: 0%;
+  transition: width 120ms linear;
+}
+article {
+  line-height: 1.8;
+}
+
+article h1 {
+  font-size: 2.8rem;
+  margin: 2rem 0 1rem;
+}
+
+article h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid #ddd;
+}
+
+article p {
+  margin: 1rem 0;
+}
+
+article ul {
+  margin-left: 2rem;
 }

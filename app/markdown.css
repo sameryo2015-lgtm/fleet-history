@@ -1,0 +1,151 @@
+article {
+  line-height: 1.9;
+  font-size: 18px;
+}
+
+article h1 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: .3rem;
+}
+
+article h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: .3rem;
+}
+
+article h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+article p {
+  margin: 1rem 0;
+}
+
+article ul {
+  padding-left: 2rem;
+}
+
+article li {
+  margin: .5rem 0;
+}
+
+article blockquote {
+  border-left: 5px solid #0f4c81;
+  padding-left: 1rem;
+  color: #666;
+  margin: 1.5rem 0;
+}
+
+article img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+article table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+article th,
+article td {
+  border: 1px solid #ddd;
+  padding: .75rem;
+}
+
+article code {
+  background: #f3f3f3;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Code block styling (fenced ``` blocks) */
+article pre {
+  background: #f8f9fa; /* light gray */
+  color: #222; /* dark text */
+  padding: 20px; /* specified generous padding */
+  overflow-x: auto; /* horizontal scroll for long lines */
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  font-size: 15px;
+  line-height: 1.8;
+  white-space: pre; /* preserve whitespace and line breaks */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-break: normal;
+}
+
+/* Ensure the <code> inside <pre> inherits the block styling and monospace */
+article pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: inherit;
+  display: block;
+}
+
+/* Table of Contents styles for ScrollSpy */
+.toc {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(15, 28, 48, 0.06);
+}
+
+.toc-title {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-item {
+  margin: 6px 0;
+  padding-left: 8px;
+  transition: all 120ms ease-in-out;
+}
+
+.toc-item.toc-sub {
+  padding-left: 20px;
+}
+
+.toc-link {
+  color: #0b1d33;
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px 8px;
+}
+
+/* Active / currently reading */
+.toc-item.active {
+  border-left: 4px solid #0b66ff;
+  padding-left: 12px;
+}
+
+.toc-item.active .toc-link,
+.toc-link.active {
+  color: #0b66ff;
+  font-weight: 700;
+}
+
+@media (max-width: 899px) {
+  /* On small screens, make TOC full width and non-sticky */
+  .toc {
+    box-shadow: none;
+    border-radius: 8px;
+  }
+}
